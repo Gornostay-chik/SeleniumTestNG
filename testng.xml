@@ -1,0 +1,9 @@
+<suite name = "TextSendSuite">
+    <test name ="TextSendTest">
+       <classes>
+
+        <class name = "tests.LoginTest"> </class>
+       </classes>
+    </test>
+
+</suite>
