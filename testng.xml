@@ -1,9 +1,10 @@
-<suite name = "TextSendSuite">
-    <test name ="TextSendTest">
-       <classes>
-
-        <class name = "tests.LoginTest"> </class>
-       </classes>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="2">
+    <test name="TextSendTest">
+        <parameter name="sendkeys" value="bobr"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.SendTest"/>
+        </classes>
     </test>
-
 </suite>
