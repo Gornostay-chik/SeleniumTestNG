@@ -40,7 +40,7 @@ public class BaseTest {
         Log.info("Starting Firefox driver");
         FirefoxOptions options = new FirefoxOptions();
         options.setPlatformName("linux");
-        options.addArguments("-headless");
+        options.addArguments("-headless"); // For run in docker
         driver = new FirefoxDriver(options);
         // Установка неявного ожидания на 10 секунд
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
