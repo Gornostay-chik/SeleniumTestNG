@@ -14,6 +14,8 @@ import org.testng.annotations.BeforeSuite;
 import utils.ExtentReportManager;
 import utils.Log;
 
+import java.time.Duration;
+
 public class BaseTest {
 
     protected WebDriver driver;
@@ -39,6 +41,9 @@ public class BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         options.setPlatformName("linux");
         driver = new FirefoxDriver(options);
+        // Установка неявного ожидания на 10 секунд
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         //driver.manage().window().maximize();
 
         Log.info("Navigating to page");
