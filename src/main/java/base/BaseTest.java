@@ -5,6 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -35,7 +36,9 @@ public class BaseTest {
     @BeforeMethod
     public void setUp () {
         Log.info("Starting Firefox driver");
-        driver = new FirefoxDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.setPlatformName("linux");
+        driver = new FirefoxDriver(options);
         //driver.manage().window().maximize();
 
         Log.info("Navigating to page");
