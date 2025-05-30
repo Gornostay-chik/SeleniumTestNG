@@ -44,6 +44,7 @@ public class BaseTest {
         // Установка неявного ожидания на 10 секунд
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+
         //driver.manage().window().maximize();
 
         Log.info("Navigating to page");
