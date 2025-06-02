@@ -27,6 +27,7 @@ pipeline {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
                     archiveArtifacts artifacts: 'reports/*.html', followSymlinks: false
+                    testNG()
                 }
             }
         }
